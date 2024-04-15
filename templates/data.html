@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Data Page</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body style="background-color: #e6f7ff;">
+    <h1 style="text-align: center;">Data Page</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Marital Status</th>
+                <th>Occupation</th>
+                <th>Monthly Income</th>
+                <th>Educational Qualifications</th>
+                <th>Family size</th>
+                <th>Pin code</th>
+                <th>Output</th>
+                <th>Feedback</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in data %}
+            <tr>
+                <td>{{ row['Age'] }}</td>
+                <td>{{ row['Gender'] }}</td>
+                <td>{{ row['Marital Status'] }}</td>
+                <td>{{ row['Occupation'] }}</td>
+                <td>{{ row['Monthly Income'] }}</td>
+                <td>{{ row['Educational Qualifications'] }}</td>
+                <td>{{ row['Family size'] }}</td>
+                <td>{{ row['Pin code'] }}</td>
+                <td>{{ row['Output'] }}</td>
+                <td>{{ row['Feedback'] }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p style="text-align: center;"><a href="/" style="text-decoration: none; color: #333;">Back to Homepage</a></p>
+</body>
+</html>

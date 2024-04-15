@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+<body style="font-family: Arial, sans-serif;">
+    <header style="background-color: #333; color: #fff; text-align: center; padding: 20px;">
+        <h1>About</h1>
+    </header>
+    <nav style="text-align: center; padding: 10px;">
+        <a href="/" style="text-decoration: none; color: #333; margin-right: 20px;">Home</a>
+        <a href="/data" style="text-decoration: none; color: #333; margin-right: 20px;">Data</a>
+        <a href="/about" style="text-decoration: none; color: #333;">About</a>
+    </nav>
+    <main style="padding: 20px;">
+        <p>This web application displays survey data collected from users.</p>
+        <p>The dataset includes information about various demographic factors such as age, gender, marital status, occupation, etc.</p>
+        <h2>Dataset Columns and Data Types</h2>
+        <table style="border-collapse: collapse; width: 100%;">
+            <thead style="background-color: #f2f2f2;">
+                <tr>
+                    <th style="border: 1px solid black; padding: 8px;">Column Name</th>
+                    <th style="border: 1px solid black; padding: 8px;">Data Type</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for column, data_type in column_info %}
+                <tr>
+                    <td style="border: 1px solid black; padding: 8px;">{{ column }}</td>
+                    <td style="border: 1px solid black; padding: 8px;">{{ data_type }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <h2>Dataset Source</h2>
+        <p>The dataset was obtained from KAGGLE. You can access the original dataset <a href="https://www.kaggle.com/datasets/sudarshan24byte/online-food-dataset" style="text-decoration: none; color: #333;">here</a>.</p>
+    </main>
+    <footer style="background-color: #333; color: #fff; text-align: center; padding: 10px;">
+        <p>&copy; 2024 Survey Data Application</p>
+    </footer>
+</body>
+</html>
